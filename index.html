@@ -38,7 +38,7 @@
   </div>
 </nav>
 
-<!-- Sliding Images / Carousel -->
+<!-- Sliding / Animated Images -->
 <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -71,38 +71,52 @@
   </button>
 </div>
 
-<!-- Main Content -->
+<!-- Improved Welcome Section -->
 <section class="container my-5">
-  <div class="row">
-    <div class="col-md-8 float-md-start"> <!-- CSS Float used here -->
-      <h2 class="text-heading">Welcome to ExploreEasy</h2>
-      <p>Established in February 2025, located in Looc, Dumaguete City, Negros Oriental. Our mission: <em>"To unfold the dreams of people ready to embark on the adventure of a lifetime into reality."</em></p>
-      <p>We arrange flights, accommodations, guided tours, and local transportation — so you just focus on enjoying your trip. We also offer tailor-made packages to match your interests.</p>
+  <div class="row g-4 align-items-center">
+    <div class="col-md-8 float-md-start">
+      <h2 class="text-heading display-6 fw-bold">🌍 Welcome to ExploreEasy</h2>
+      <p class="lead text-muted">Your trusted travel partner since <strong>February 2025</strong>, based in <strong>Looc, Dumaguete City, Negros Oriental</strong>.</p>
+      
+      <blockquote class="fst-italic bg-light p-3 rounded border-start border-4 border-pink my-3">
+        "To unfold the dreams of people ready to embark on the adventure of a lifetime into reality."
+      </blockquote>
+
+      <p>We take care of every detail — from booking flights and accommodations to arranging guided tours and local transportation. All you need to do is relax, explore, and make unforgettable memories.</p>
+      <p class="fw-medium text-blue mt-2">🎯 We also create <strong>tailor-made packages</strong> designed just for your interests, schedule, and budget.</p>
     </div>
-    <div class="col-md-4 float-md-end"> <!-- CSS Float used here -->
-      <div class="card custom-card shadow">
-        <div class="card-body">
-          <h5 class="card-title">🔥 Special Offers</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">✅ 10% Early Bird Discount</li>
-            <li class="list-group-item">👨‍👩‍👧‍👦 Family & Group Savings</li>
-            <li class="list-group-item">🎨 Exclusive Art Collections</li>
-          </ul>
-        </div>
+
+    <div class="col-md-4 float-md-end">
+      <div class="card custom-card shadow-lg p-3 text-center h-100">
+        <h5 class="text-pink fw-bold">🔥 Exclusive Offers</h5>
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item bg-paleblue rounded mb-2">✅ <strong>10% OFF</strong> Early Bird Discount</li>
+          <li class="list-group-item bg-yellow rounded mb-2">👨‍👩‍👧‍👦 Family & Group Savings</li>
+          <li class="list-group-item bg-green rounded">🎨 Curated Art Collections</li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <!-- Image Map -->
-  <div class="mt-5 text-center">
-    <h4 class="text-heading">📍 Explore Popular Destinations</h4>
-    <img src="images/map-philippines.jpg" alt="Philippines Map" usemap="#destMap" class="img-fluid rounded shadow" style="max-width:750px;">
-    <map name="destMap">
-      <area shape="rect" coords="50,50,180,150" href="services.html#cebu" alt="Cebu Tours">
-      <area shape="circle" coords="300,120,60" href="services.html#dumaguete" alt="Dumaguete Tours">
-      <area shape="poly" coords="420,60,480,130,400,180" href="services.html#palawan" alt="Palawan Tours">
-    </map>
-    <p class="text-muted small">Click locations on the map to view packages</p>
+  <!-- Image Map with Hover Effect -->
+  <div class="mt-5 text-center" id="map-container">
+    <h4 class="text-heading mb-3">📍 Explore Popular Destinations</h4>
+    <p class="text-muted small mb-3">Hover over areas and click to view tour packages</p>
+
+    <div class="position-relative d-inline-block" id="image-map-wrapper">
+      <img 
+        src="images/map-philippines.jpg" 
+        alt="Philippines Travel Map" 
+        usemap="#destMap" 
+        class="img-fluid rounded shadow-lg map-image"
+        style="max-width:750px;"
+      >
+      <map name="destMap" id="destMap">
+        <area shape="rect" coords="50,50,180,150" href="services.html#cebu" alt="Cebu Tours" class="map-hotspot">
+        <area shape="circle" coords="300,120,60" href="services.html#dumaguete" alt="Dumaguete Tours" class="map-hotspot">
+        <area shape="poly" coords="420,60,480,130,400,180" href="services.html#palawan" alt="Palawan Tours" class="map-hotspot">
+      </map>
+    </div>
   </div>
 </section>
 
@@ -115,12 +129,33 @@
       <a href="services.html">Services & Packages</a> |
       <a href="contact.html">Contact</a>
     </p>
-    <p>Developed by: Rhyss Riona Maliel Crispo | IT130L Web Design Project</p>
+    <p>Developed by: [Your Full Name & Student ID] | IT130L Web Design Project</p>
     <p class="small">© 2025 ExploreEasy Travel & Tours | For academic purposes only</p>
   </div>
 </footer>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<!-- Map Hover Enhancement Script -->
+<script>
+const hotspots = document.querySelectorAll('.map-hotspot');
+const mapImg = document.querySelector('.map-image');
+
+hotspots.forEach(area => {
+  area.addEventListener('mouseover', () => {
+    mapImg.style.filter = 'brightness(1.1) saturate(1.2)';
+    mapImg.style.boxShadow = '0 0 25px rgba(247, 145, 169, 0.7)';
+    document.body.style.cursor = 'pointer';
+  });
+  area.addEventListener('mouseout', () => {
+    mapImg.style.filter = 'brightness(1) saturate(1)';
+    mapImg.style.boxShadow = '0 0 20px rgba(247, 145, 169, 0.5)';
+    document.body.style.cursor = 'default';
+  });
+});
+</script>
+
 </body>
 </html>

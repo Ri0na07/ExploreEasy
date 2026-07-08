@@ -1,48 +1,63 @@
-/* Base */
+/* --------------------------
+   BASE STYLES
+--------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
   line-height: 1.7;
-  background-color: #E0F2F4;
+  background-color: #E0F2F4; /* Very Light Blue */
 }
 
-/* --- Required CSS3 Features --- */
+/* --------------------------
+   COLOR PALETTE
+--------------------------- */
+:root {
+  --light-pink: #FFBDBF;
+  --rose: #F791A9;
+  --soft-yellow: #FFE797;
+  --pale-green: #DDDD7B;
+  --pale-blue: #E0F2F4;
+  --muted-blue: #BAD6DA;
+}
+
+/* --------------------------
+   REQUIRED CSS3 FEATURES
+--------------------------- */
 
 /* Float */
 .float-md-start { float: left; }
 .float-md-end { float: right; }
 
-/* Opacity & Overlay */
-.bg-overlay { background: rgba(0,0,0,0.55); opacity: 0.95; }
-.gallery-img { opacity: 0.9; transition: 0.3s; }
+/* Opacity & RGBA */
+.bg-overlay { background: rgba(0, 0, 0, 0.55); opacity: 0.95; }
+.gallery-img { opacity: 0.9; transition: all 0.3s ease; }
 .gallery-img:hover { opacity: 1; transform: scale(1.05); }
 
 /* Navigation Bar */
 .custom-nav {
-  background: linear-gradient(90deg, #F791A9, #BAD6DA);
+  background: linear-gradient(90deg, var(--rose), var(--muted-blue));
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.nav-link { color: #fff !important; }
-.nav-link:hover { color: #FFE797 !important; }
+.nav-link { color: #ffffff !important; }
+.nav-link:hover { color: var(--soft-yellow) !important; }
 
 /* Dropdown Menu */
 .custom-dropdown {
-  background-color: #FFBDBF;
+  background-color: var(--light-pink);
   border: none;
   border-radius: 8px;
 }
 .custom-dropdown .dropdown-item:hover {
-  background-color: #F791A9;
+  background-color: var(--rose);
   color: white;
 }
 
 /* Image Gallery */
 .gallery-img {
-  width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 10px;
@@ -53,16 +68,15 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-  border: 1px solid #BAD6DA;
+  border: 1px solid var(--muted-blue);
   border-radius: 8px;
   padding: 0.6rem;
 }
 
 /* Forms */
 .custom-form {
-  background-color: #fff;
-  border: 2px solid #DDDD7B;
-  border-radius: 12px;
+  background-color: #ffffff;
+  border: 2px solid var(--pale-green);
 }
 
 /* Rounded Corners */
@@ -72,7 +86,7 @@ textarea {
 /* Border Image */
 .custom-card {
   border: 4px solid;
-  border-image: linear-gradient(45deg, #F791A9, #DDDD7B) 1;
+  border-image: linear-gradient(45deg, var(--rose), var(--pale-green)) 1;
 }
 
 /* Multiple Backgrounds */
@@ -80,20 +94,19 @@ textarea {
   background: 
     linear-gradient(rgba(255, 231, 151, 0.7), rgba(186, 214, 218, 0.7)),
     url('../images/pattern-bg.jpg') center/cover no-repeat;
-  color: #333;
 }
 
 /* Gradients */
 .custom-gradient {
-  background: linear-gradient(120deg, #FFBDBF, #BAD6DA);
+  background: linear-gradient(120deg, var(--light-pink), var(--muted-blue));
 }
 .custom-btn {
-  background: linear-gradient(90deg, #F791A9, #DDDD7B);
+  background: linear-gradient(90deg, var(--rose), var(--pale-green));
   border: none;
   color: white;
 }
 .custom-btn:hover {
-  background: linear-gradient(90deg, #DDDD7B, #F791A9);
+  background: linear-gradient(90deg, var(--pale-green), var(--rose));
   color: white;
 }
 
@@ -102,36 +115,60 @@ textarea {
 .shadow-sm { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 .shadow-lg { box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
 
-/* --- Custom Elements --- */
+/* --------------------------
+   CUSTOM STYLES
+--------------------------- */
+
+/* Slider */
 .carousel-item img {
   height: 500px;
   object-fit: cover;
 }
-.text-heading {
-  color: #F791A9;
-  font-weight: bold;
+
+/* Text & Colors */
+.text-heading { color: var(--rose); }
+.text-pink { color: var(--rose); }
+.text-blue { color: var(--muted-blue); }
+.border-pink { border-color: var(--rose) !important; }
+.bg-paleblue { background-color: var(--pale-blue); }
+.bg-yellow { background-color: var(--soft-yellow); }
+.bg-green { background-color: var(--pale-green); }
+
+blockquote:hover {
+  background: linear-gradient(90deg, var(--light-pink), var(--pale-blue));
+  transform: scale(1.01);
 }
+
+/* Map Hover */
+.map-image {
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Lists & Tables */
 .custom-list {
-  background-color: #FFBDBF;
+  background-color: var(--light-pink);
   list-style-position: inside;
 }
 .custom-table th {
-  background-color: #BAD6DA;
+  background-color: var(--muted-blue);
 }
 .custom-table td {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .promo-box {
-  background-color: #FFE797;
+  background-color: var(--soft-yellow);
 }
+
+/* Footer */
 .custom-footer {
-  background: linear-gradient(90deg, #BAD6DA, #F791A9);
+  background: linear-gradient(90deg, var(--muted-blue), var(--rose));
   color: white;
 }
 .custom-footer a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 .custom-footer a:hover {
-  color: #FFE797;
+  color: var(--soft-yellow);
 }

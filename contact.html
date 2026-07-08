@@ -38,44 +38,47 @@
 
 <section class="container my-5">
   <h2 class="text-center text-heading mb-4">Get In Touch</h2>
-  <div class="row">
+  <div class="row g-4">
     <div class="col-md-6 float-md-start">
       <h4>📍 Our Location</h4>
-      <p>Looc, Dumaguete City<br>Negros Oriental 6200</p>
-      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61591680080529" target="_blank">ExploreEasy Travel and Tours & Art Collections</a></p>
-      <p><strong>Hours:</strong> Monday–Saturday, 8:00AM–5:00PM</p>
+      <p>Looc, Dumaguete City<br>Negros Oriental 6200<br>Philippines</p>
+      <p><strong>Facebook:</strong> 
+        <a href="https://www.facebook.com/profile.php?id=61591680080529" target="_blank" class="text-decoration-none text-pink">ExploreEasy Travel and Tours & Art Collections</a>
+      </p>
+      <p><strong>Business Hours:</strong> Monday – Saturday, 8:00 AM – 5:00 PM</p>
 
-      <!-- HTML Form -->
-      <h5 class="mt-4">📩 Send Inquiry</h5>
-      <form class="custom-form p-4 rounded shadow-sm">
+      <!-- Functional HTML Form -->
+      <h5 class="mt-4 mb-3">📩 Send Us a Message</h5>
+      <form action="mailto:youremail@example.com" method="post" enctype="text/plain" class="custom-form p-4 rounded shadow-sm">
         <div class="mb-3">
           <label for="name" class="form-label">Full Name</label>
-          <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          <input type="text" id="name" name="Name" class="form-control" placeholder="Enter your full name" required>
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="Email" class="form-control" placeholder="yourname@example.com" required>
         </div>
         <div class="mb-3">
           <label for="interest" class="form-label">Interested In</label>
-          <select id="interest" class="form-select">
+          <select id="interest" name="Interest" class="form-select">
             <option>Travel Package</option>
             <option>Art Collection</option>
             <option>Custom Itinerary</option>
-            <option>Others</option>
+            <option>Other Inquiry</option>
           </select>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
-          <textarea id="message" rows="4" class="form-control" placeholder="Write your message here..."></textarea>
+          <textarea id="message" name="Message" rows="4" class="form-control" placeholder="Write your message here..." required></textarea>
         </div>
         <button type="submit" class="btn custom-btn w-100">Send Message</button>
       </form>
     </div>
+
     <div class="col-md-6 float-md-end d-flex align-items-center justify-content-center">
-      <div class="text-center p-5 rounded custom-multibg shadow-lg">
-        <h4>Start Your Journey Today!</h4>
-        <p>Let us help you create your perfect trip.</p>
+      <div class="text-center p-5 rounded custom-multibg shadow-lg w-100">
+        <h4 class="text-dark">Start Your Journey Today!</h4>
+        <p class="text-muted">Let us help you plan the adventure of a lifetime.</p>
       </div>
     </div>
   </div>
