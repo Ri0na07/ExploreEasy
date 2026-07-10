@@ -4,7 +4,7 @@ This project is a website developed for **ExploreEasy Travel and Tours & Art Col
 The website serves as an informational and service platform that introduces the business, its offers, and provides visitors with access to travel packages, art collections, and contact details.
 
 🌐 **Live Website:**
-https://ri0na07.github.io/IT130L-Project/index.html
+https://ri0na07.github.io/IT130L-PROJECT/index.html
 
 ---
 
@@ -73,4 +73,4 @@ The website focuses on:
 ## 📷 Preview
 
 You can view the full working website here:
-👉 https://ri0na07.github.io/IT130L-Project/index.html
+👉 https://ri0na07.github.io/IT130L-PROJECT/index.html
